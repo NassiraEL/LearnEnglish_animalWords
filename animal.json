@@ -1,0 +1,74 @@
+{
+    "animal": [
+        {
+            "img":"img/cat.png",
+            "name": "Cat"
+        },
+        {
+            "img":"img/dog.png",
+            "name": "Dog"
+        },
+        {
+            "img":"img/elephant.png",
+            "name": "Elephant"
+        },
+        {
+            "img":"img/fox.png",
+            "name": "Fox"
+        },
+        {
+            "img":"img/frog.png",
+            "name": "Frog"
+        },
+        {
+            "img":"img/horse.png",
+            "name": "Horse"
+        },
+        {
+            "img":"img/kangaroo.png",
+            "name": "Kangaroo"
+        },
+        {
+            "img":"img/lion.png",
+            "name": "Lion"
+        },
+        {
+            "img":"img/monkey.png",
+            "name": "Monkey"
+        },
+        {
+            "img":"img/mouse.png",
+            "name": "Mouse"
+        },
+        {
+            "img":"img/panda.png",
+            "name": "Panda"
+        },
+        {
+            "img":"img/rabbit.png",
+            "name": "Rabbit"
+        },
+        {
+            "img":"img/sheep.png",
+            "name": "Sheep"
+        },
+        {
+            "img":"img/squirrel.png",
+            "name": "Squirrel"
+        },
+        {
+            "img":"img/turtle.png",
+            "name": "Turtle"
+        },
+        {
+            "img":"img/whale.png",
+            "name": "Whale"
+        },
+        {
+            "img":"img/zebra.png",
+            "name": "Zebra"
+        }
+    ],
+    
+    "choices":["Zebra","Whale","Turtle","Squirrel","Sheep","Rabbit","Panda","Mouse","Monkey","Lion","Kangaroo","Horse","Frog","Fox","Elephant","Dog","Cat"]
+}
