@@ -15,6 +15,18 @@ let xml = new XMLHttpRequest();
 xml.onload = function(){
     let data = JSON.parse(this.responseText);
     let index =0;
+
+    //get localStorage
+    if(localStorage.length>0){
+        let dataStorage = JSON.parse(localStorage.getItem("level"));
+        index = dataStorage[0];
+        sc = dataStorage[1];
+        life = dataStorage[2];
+        score.innerHTML = sc;
+        live.innerHTML = life;
+    }
+
+
     image.src  = data.animal[index].img;
     let answerCorrect = data.animal[index].name;
     let randomChoice = [answerCorrect];
@@ -43,6 +55,9 @@ xml.onload = function(){
                 index++;
                 setTimeout(function(){
                     if(index<data.animal.length){
+                        let level = [index, sc, life];
+                        localStorage.setItem("level", JSON.stringify(level));
+
                         answer.innerHTML ="Answer";
                         answer.style.background = "#eee";
                         answer.style.color = "#4b8183";
@@ -62,6 +77,11 @@ xml.onload = function(){
                         }
                     }
                     else{
+                        index = 0;
+                        sc = 0;
+                        life = 5;
+                        let level = [index, sc, life];
+                        localStorage.setItem("level", JSON.stringify(level));
                         game.style.visibility = "hidden";
                         audio.src = "audio/congratulation.m4a";
                         audio.play();
@@ -83,6 +103,9 @@ xml.onload = function(){
                     index++;
                     setTimeout(function(){
                         if(index<data.animal.length){
+                            let level = [index, sc, life];
+                            localStorage.setItem("level", JSON.stringify(level));
+
                             answer.innerHTML ="Answer";
                             answer.style.background = "#eee";
                             answer.style.color = "#4b8183";
@@ -103,6 +126,11 @@ xml.onload = function(){
                         }
                     },1000)
                 }else{
+                    index = 0;
+                    sc = 0;
+                    life = 5;
+                    let level = [index, sc, life];
+                    localStorage.setItem("level", JSON.stringify(level));
                     game.style.visibility = "hidden";
                     audio.src = "audio/gameOver.m4a";
                     audio.play();
@@ -145,3 +173,4 @@ function end(situation, scor){
 xml.open("GET", "animal.json");
 xml.send();
 
+git
